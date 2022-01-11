@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="about">
+    <h1>About me</h1>
+    <p>Choose your preference!</p>
+
+    <form action="{{ url_for('about2') }}" method="post">
+        <label for="genre">Music Genre:</label>
+        <p></p>
+        <input type="checkbox" id="genre1" name="genre" value="R&B">
+        <label for="genre1"> I usually listen to R&B</label><br>
+        <input type="checkbox" id="genre2" name="genre" value="Classic">
+        <label for="genre2"> I usually listen to Classic</label><br>
+        <input type="checkbox" id="genre3" name="genre" value="Pop">
+        <label for="genre3"> I usually listen to Pop</label><br>
+        <p></p>
+
+
+        <label for="activity">Activity:</label>
+        <p></p>
+        <input type="checkbox" id="activity1" name="activity" value="Everyday Use">
+        <label for="activity1"> I use headphone as daily essentials </label><br>
+        <input type="checkbox" id="activity2" name="activity" value="Fitness">
+        <label for="activity2"> I use headphone for fitness purpose</label><br>
+        <input type="checkbox" id="activity3" name="activity" value="Audiophile">
+        <label for="activity3"> I use headphone for professional purpose</label><br>
+        <input type="checkbox" id="activity4" name="activity" value="Entertainment">
+        <label for="activity4"> I use headphone for Entertainment</label><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <p></p>
+
+    </div>
+</div>
+{% endblock %}

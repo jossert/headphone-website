@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="review">
+
+
+        <form  method="post">
+        <br>
+        <label for="choice1">Select brand and model name</label>
+        <select class="form-control" id="choice1" name="brand" >
+            {% for i in data %}
+            <option value= {{i[0]}},{{i[1]}} {% if (prev[0] == i[0]) and (prev[1] == i[1])  %} selected{% endif %}>{{i[0]}} {{i[1]}}</option>
+            {% endfor %}
+
+        </select>
+
+        <br>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check" name="check">
+            <label class="form-check-label" for="check">Professional Reviews</label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <br>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <br>
+
+
+    <img  src="static/wordcloud/{{prev[1]}}.png" style="max-width: 60%; ">
+
+    <br>
+    <hr>
+
+    <ul class="media-list">
+        <a href="/headphone?view={{prev[1]}}">Go to {{prev[0]}} {{ prev[1]}}</a>
+
+        {% for i in query %}
+        <li class="media">
+            <a  class="pull-left">
+                <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+            </a>
+            <div class="media-body">
+            <span class="text-muted pull-right">
+                <small class="text-muted">{{i[6]}}</small>
+            </span>
+                <strong class="text-success">@{{i[0]}}</strong>
+                <p>
+                    {{i[7]}}
+                </p>
+            </div>
+        </li>
+        {% endfor %}
+
+    </ul>
+
+
+
+
+</div>
+{% endblock %}

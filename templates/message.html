@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="search" xmlns="http://www.w3.org/1999/html">
+    <p></p>
+    <center>
+        <h2>Headphone Search</h2>
+        <br>
+
+        <form class="example col-lg-10" method="post" action=""
+              style="margin:auto;width = 600px">
+            <input type="text" placeholder="Search by brand or model name or by all" name="text">
+            <button type="submit" >Submit</button>
+
+        </form>
+
+        <br>
+        {{msg}}
+
+    </center>
+
+</div>
+{% endblock %}

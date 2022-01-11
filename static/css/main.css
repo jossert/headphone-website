@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+  }
+  /*
+   * Formatting the header area
+   */
+  header {
+    background-color: #DFB887;
+    height: 35px;
+    width: 100%;
+    opacity: .9;
+    margin-bottom: 10px;
+  }
+  header h1.logo {
+    margin: 0;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+  }
+  header h1.logo:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  /*
+   * Centering the body content
+   */
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  div.home {
+    padding: 1000px 0 500px 0;
+    background-color: #E6E6FA;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+  }
+  div.about {
+    padding: 10px 0 30px 0;
+    background-color: #E6E6FA;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+  }
+  div.search {
+      padding: 10px 0 30px 0;
+      background-color: #E6E6FA;
+      -webkit-border-radius: 6px;
+         -moz-border-radius: 6px;
+              border-radius: 6px;
+    }
+
+    div.review {
+        padding: 10px 0 30px 0;
+        background-color: #E6E6FA;
+        -webkit-border-radius: 6px;
+           -moz-border-radius: 6px;
+                border-radius: 6px;
+      }
+
+      div.info {
+
+            }
+
+  h2 {
+    font-size: 3em;
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+  h3 {
+    font-size: 1.7em;
+    font-weight: 100;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #999;
+  }
+  .menu {
+    float: right;
+    margin-top: 8px;
+  }
+  .menu li {
+    display: inline;
+  }
+  .menu li + li {
+    margin-left: 35px;
+  }
+  .menu li a {
+    color: #444;
+    text-decoration: none;
+  }
+
+  .card{
+      margin-bottom: 10px;
+  }
+
+
+
+  form.example input[type=text] {
+      padding: 5px;
+      font-size: 15px;
+      float: center;
+      width: 50%;
+    }
+
+
+
+
+
+
+  form.example button {
+       float: center;
+       width: 10%;
+       padding: 5px;
+       background:  #DFB887;
+       font-size: 15px;
+       border-left: none;
+     }
+
+
+     body{margin-top:20px;}
+
+     .comment-wrapper .panel-body {
+         max-height:650px;
+         overflow:auto;
+     }
+
+     .comment-wrapper .media-list .media img {
+         width:64px;
+         height:64px;
+         border:2px solid #e5e7e8;
+     }
+
+     .comment-wrapper .media-list .media {
+         border-bottom:1px dashed #efefef;
+         margin-bottom:25px;
+     }
+
+  .masthead {
+      position: relative;
+      width: 100%;
+      height: auto;
+      min-height: 35rem;
+      padding: 15rem 0;
+      background: linear-gradient(to bottom,
+          #{fade-out($black, 0.7)} 0%,
+          #{fade-out($black, 0.3)} 75%,
+          $black 100%),
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+
+
+
+
+

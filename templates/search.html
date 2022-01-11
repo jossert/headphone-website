@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="search" xmlns="http://www.w3.org/1999/html">
+    <p></p>
+    <center>
+        <h2>Headphone Search</h2>
+    <br>
+
+      <form class="example col-lg-10" method="post" action=""
+          style="margin:auto;width = 600px">
+            <input type="text" placeholder="Search by brand or model name or by all" name="text">
+          <button type="submit" >Submit</button>
+
+      </form>
+
+    </center>
+
+    <br>
+    <form method="post" action="{{url_for('sort')}}" >
+        <select id="sel_id" name="sort"  onchange="this.form.submit();">
+            <option >Sort</option>
+            <option value="Releasedate">Newest</option>
+            <option value="Price1">Price low to high</option>
+            <option value="Price2">Price high to low</option>
+        </select>
+    </form>
+
+
+
+
+    <br>
+    <center>
+    <div class="container">
+        <div class="row">
+            {% for item in data %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                <div class="card h-100">
+                    <!-- link to the info page -->
+                    <a href="/headphone?view={{item[0]}}">
+                        <div class="card-img-top"
+                             style="background: url('static/headphone/{{item[10]}}'); background-repeat:no-repeat;
+                             background-size: cover; height:110px;width:45% "></div>
+                    </a>
+                    <div class="card-body">
+                        <h6 class="card-title">
+                            <a href="/headphone?view={{item[0]}}">{{item[1]}} {{ item[0]}}</a>
+                        </h6>
+                        <h5>${{item[3]}}</h5>
+                        <h8>{{item[6]}}</h8>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"></small>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+
+    </div>
+    </center>
+
+
+
+
+</div>
+{% endblock %}
+
